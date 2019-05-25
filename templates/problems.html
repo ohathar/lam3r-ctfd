@@ -1,0 +1,31 @@
+{% include 'main.html' %}
+<br /><br />
+
+{% if message != '' %}
+<div class="container">
+<span class="be_red_and_centered">
+{{ message }}
+</span>
+</div>
+{% endif %}
+
+{% for problem in problem_data %}
+<div class="container">
+<center><h3>{{ problem.get('points') }} pts -- {{ problem.get('name')}}</h3></center>
+<center>{{ problem.get('description') }}</center>
+<br /><br />
+{% if problem.get('id') not in user_solved %}
+<center>
+	<form method="post" action="/problems">
+		Flag: <input type="text" name="send_flag" size="35" /><br /><br />
+		<input type="hidden" name="problem_id" value="{{ problem.get('id') }}" />
+		<input type="submit" name="submit" value="flag" />
+	</form>
+</center>
+{% else %}
+<span class="be_red_and_centered">SOLVED</span><br />
+{% endif %}
+<pre>===========================================</pre>
+</div>
+<br /><br />
+{% endfor %}

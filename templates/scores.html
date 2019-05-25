@@ -1,0 +1,9 @@
+{% include 'main.html' %}
+<br /><br />
+<div class="container">
+	<pre>
+	{% for score in score_data %}
+	{{ loop.index }} {{ score.get('username')}} {{ score.get('score') }}pts
+	{% endfor %}
+	</pre>
+</div>

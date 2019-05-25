@@ -1,0 +1,13 @@
+bcrypt
+cffi
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+passlib
+pkg-resources
+pycparser
+six
+uWSGI
+Werkzeug

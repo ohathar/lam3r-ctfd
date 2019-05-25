@@ -1,0 +1,22 @@
+* {
+    font-family: monospace;
+  }
+
+.container {
+   text-align: center;
+ }
+
+.container pre {
+  display: inline-block;
+  text-align: left;
+ }
+
+ .be_red_and_centered {
+ 	text-align: center;
+ 	color: red;
+ }
+
+ .be_green_and_centered {
+ 	text-align: center;
+ 	color: green;
+ }

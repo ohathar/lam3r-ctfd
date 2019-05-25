@@ -1,0 +1,13 @@
+{% include 'main.html' %}
+<br /><br />
+{% if message != '' %}
+<div class="be_red_and_centered">{{ message }}</div>
+<br /><br />
+{% endif %}
+<center>
+	<form method="post" action="/login">
+		UserName: <input type="text" name="username" /><br />
+		PassWord: <input type="password" name="password" /><br /><br />
+		<input type="submit" value="login" name="submit" /> || <input type="submit" value="register" name="submit" /><br />
+	</form>
+</center>
