@@ -1,0 +1,20 @@
+[Unit]
+Description=uWSGI instance to serve lam3r-ctfd
+After=network.target
+
+[Service]
+# user who owns lam3r files
+User=lam3r
+# nginx group
+Group=www-data
+# dir with app.py
+WorkingDirectory=/home/lam3r/lam3r-ctfd/lam3r-ctfd
+# dir for virtualenv bin
+Environment="PATH=/home/lam3r/lam3r-ctfd/bin"
+# path to virtualenv uwsgi and ini file to run with
+ExecStart=/home/lam3r/lam3r-ctfd/bin/uwsgi --ini app.ini
+
+[Install]
+# start at normal boot
+WantedBy=multi-user.target
+
