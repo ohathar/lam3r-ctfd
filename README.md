@@ -14,7 +14,12 @@ cp app.example.db app.db
 
 or install nginx/apache and proxy pass your way to victory!
 ```
-PLACEHOLDER for nginx config
+apt install nginx letsencrypt
+letsencrypt certonly --standalone -d mysite.biz
+cp lam3r.conf /etc/nginx/sites-available/
+## edit to suit ##
+ln -s /etc/nginx/sites-available/lam3r.conf /etc/nginx/sites-enabled/
+systemctl restart nginx
 ```
 
 Run lam3r-ctfd as a systemd service
