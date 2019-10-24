@@ -13,5 +13,15 @@ cp app.example.db app.db
 ```
 
 or install nginx/apache and proxy pass your way to victory!
+```
+PLACEHOLDER for nginx config
+```
 
+Run lam3r-ctfd as a systemd service
+```
+cp lam3r.service /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable lam3r # start at boot
+systemctl start lam3r
+```
 
